@@ -1,10 +1,13 @@
+# use Postgres.app
+export PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
+
+# Simple prompt with current dir and git branch. Ruby version?
+PS1='\[\e[0;33m\]\w$(__git_ps1 " (%s)") $\[\e[0m\] '
+
 # history
 export HISTCONTROL=erasedups
 export HISTFILESIZE=10000
 export HISTSIZE=10000
-
-# use Postgres.app
-export PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
 
 # always install rubies with readline support
 export CONFIGURE_OPTS="--with-readline-dir=$(brew --prefix readline)"
